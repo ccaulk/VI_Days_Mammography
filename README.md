@@ -49,6 +49,8 @@ model, and view the risk score alongside the asymmetry heatmaps and the
 patient's BI-RADS / density context. A research-only disclaimer is shown
 on every screen.
 
+![AsymView dashboard](outputs/asymview_demo.png)
+
 ## Repository layout
 
 ```
