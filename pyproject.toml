@@ -1,0 +1,32 @@
+[project]
+name = "asymview"
+version = "0.1.0"
+description = "AsymMirai breast asymmetry risk predictions on public VinDr-Mammo studies"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+    "pandas>=2.0",
+    "pillow>=10.0",
+    "streamlit>=1.30",
+    "gdown>=5.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+# Pull torch from the CPU wheel index; the default index ships ~2.5GB of CUDA.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["asymview*"]
