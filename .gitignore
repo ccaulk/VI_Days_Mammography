@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv
+.env
+.env.*
+!.env.example
+AsymMirai/
+AsymView/data
+AsymView/models
+AsymView/results
+.streamlit/secrets.toml

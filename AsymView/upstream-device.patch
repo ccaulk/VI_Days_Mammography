@@ -1,0 +1,8 @@
+--- a/asymmetry_model/mirai_localized_dif_head.py
++++ b/asymmetry_model/mirai_localized_dif_head.py
+@@ -235 +235 @@
+-            mean_asymmetry += (asymmetry * (1 - sub_list).cuda())
++            mean_asymmetry += (asymmetry * (1 - sub_list).to(asymmetry.device))
+@@ -237 +237 @@
+-        count_list = count_list.cuda()
++        count_list = count_list.to(mean_asymmetry.device)
