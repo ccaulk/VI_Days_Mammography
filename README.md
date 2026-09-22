@@ -33,10 +33,21 @@ python src/predict.py
 
 # 4. Render heatmap overlays for the highest-risk exams
 python src/visualize.py --top-n 5
+
+# 5. Launch the AsymView dashboard
+streamlit run src/app.py
 ```
 
 Results are written to `outputs/predictions.csv` and
 `outputs/heatmaps/<exam_id>.png`.
+
+## AsymView dashboard
+
+The `streamlit run src/app.py` command launches **AsymView**, a simple
+web dashboard where you select a de-identified sample study, run the
+model, and view the risk score alongside the asymmetry heatmaps and the
+patient's BI-RADS / density context. A research-only disclaimer is shown
+on every screen.
 
 ## Repository layout
 
@@ -44,6 +55,7 @@ Results are written to `outputs/predictions.csv` and
 src/
   predict.py        # main inference script (risk score + asymmetry stats)
   visualize.py      # heatmap overlay renderer
+  app.py            # AsymView Streamlit dashboard
   asymmirai/        # vendored model definitions (MIT, from AsymMirai)
 scripts/
   download_data.py  # fetches the public data and pre-trained weights
