@@ -1,0 +1,8 @@
+# Runtime dependencies for the AsymMirai prediction pipeline.
+# The original AsymMirai repo pins 2019-era versions that do not run on
+# modern Python / Apple Silicon, so we use current releases instead.
+torch>=2.0
+numpy
+pandas
+opencv-python
+matplotlib
