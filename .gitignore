@@ -4,3 +4,4 @@ __pycache__/
 weights/
 data/
 .pytest_cache/
+study_scores.csv
